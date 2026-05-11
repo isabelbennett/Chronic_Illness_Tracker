@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chronic Illness Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Chronic Illness Tracking System (Admin View)</h1>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/patients">Patients</a>
+    <a href="/doctors">Doctors</a>
+    <a href="/appointments">Appointments</a>
+    <a href="/conditions">Conditions</a>
+    <a href="/patient">Patient View</a>
+    <a href="/doctor">Doctor View</a>
+</nav>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
