@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Patient Conditions</h2>
+
+<table>
+    <tr>
+        <th>Patient</th>
+        <th>Condition</th>
+        <th>Severity</th>
+        <th>Status</th>
+    </tr>
+    {% for c in conditions %}
+    <tr>
+        <td>{{ c[0] }} {{ c[1] }}</td>
+        <td>{{ c[2] }}</td>
+        <td>{{ c[3] }}</td>
+        <td>{{ c[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

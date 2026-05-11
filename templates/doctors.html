@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Doctors</h2>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Specialty</th>
+    </tr>
+    {% for d in doctors %}
+    <tr>
+        <td>{{ d[0] }}</td>
+        <td>{{ d[1] }}</td>
+        <td>{{ d[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

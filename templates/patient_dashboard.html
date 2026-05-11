@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Patient Dashboard</h2>
+<h3>{{ patient[0] }} {{ patient[1] }} ({{ patient[2] }})</h3>
+
+<h3>My Conditions</h3>
+<table>
+    <tr>
+        <th>Condition</th>
+        <th>Severity</th>
+        <th>Status</th>
+    </tr>
+    {% for c in conditions %}
+    <tr>
+        <td>{{ c[0] }}</td>
+        <td>{{ c[1] }}</td>
+        <td>{{ c[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<h3>My Upcoming Appointments</h3>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Reason</th>
+        <th>Doctor</th>
+    </tr>
+    {% for a in appointments %}
+    <tr>
+        <td>{{ a[0] }}</td>
+        <td>{{ a[1] }}</td>
+        <td>{{ a[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
